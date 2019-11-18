@@ -7,7 +7,6 @@ import locale_en from './locales/en';
 import JobsList from "./components/jobsList";
 
 let detectLocal = () =>{
-    console.log(navigator.language.split("-")[0]);
     if(navigator.language.split("-")[0] === "es"){
         return locale_es;
     }else{
