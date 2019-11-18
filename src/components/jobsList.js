@@ -36,11 +36,19 @@ export default class JobsList extends React.Component {
     ]
   };
 
+  header = () =>{
+    if(navigator.language.split("-")[0] === "es"){
+      return "thead-light";
+  }else{
+      return "thead-dark";
+  }
+  }
+
   render() {
     return (
       <div>
         <table className="table">
-          <thead className="thead-dark">
+          <thead className={this.header()}>
             <tr>
               <th scope="col">#</th>
               <th scope="col"><FormattedMessage id="Position"/></th>
